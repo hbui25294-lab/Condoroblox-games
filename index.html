@@ -1,41 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Condogame Roblox</title>
+  <!-- Font Minecraft style -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      font-family: 'Press Start 2P', cursive;
+      background: url('https://www.publicdomainpictures.net/pictures/320000/velka/galaxy-background-1574186463dR0.jpg') no-repeat center center fixed;
+      background-size: cover;
+      overflow: hidden;
+      color: white;
       text-align: center;
-      background-color: #111;
-      color: #fff;
-      padding: 50px;
     }
+
     h1 {
-      color: #00ffcc;
+      font-size: 2em;
+      margin: 50px 20px 20px;
+      background: linear-gradient(270deg, red, orange, yellow, green, cyan, blue, violet);
+      background-size: 1000% 1000%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rainbow 10s linear infinite, sparkle 2s infinite;
     }
+
+    @keyframes rainbow {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    @keyframes sparkle {
+      0%, 100% {text-shadow: 0 0 5px white, 0 0 10px cyan;}
+      50% {text-shadow: 0 0 15px yellow, 0 0 25px magenta;}
+    }
+
+    p {
+      font-size: 0.8em;
+      margin-bottom: 40px;
+    }
+
     .btn {
-      display: block;
-      margin: 20px auto;
+      display: inline-block;
+      margin: 15px;
       padding: 15px 25px;
-      font-size: 18px;
-      background: #00ffcc;
-      color: #111;
-      text-decoration: none;
+      background: rgba(255, 255, 255, 0.85);
+      color: black;
       border-radius: 8px;
-      width: 250px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 0 10px white;
     }
+
     .btn:hover {
-      background: #00cc99;
+      background: yellow;
+      transform: scale(1.1);
+      box-shadow: 0 0 20px cyan, 0 0 30px violet;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.6em;
+      color: #ddd;
+    }
+
+    /* Hiệu ứng tuyết rơi */
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      color: white;
+      font-size: 14px;
+      opacity: 0.8;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
+        opacity: 0;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Condogame Roblox</h1>
-  <p>Chọn link để vào game:</p>
-  <a class="btn" href="https://shorturl.asia/POZJv" target="_blank">Link 1</a>
-  <a class="btn" href="https://shorturl.asia/ltMUc" target="_blank">Link 2</a>
-  <a class="btn" href="https://discord.gg/6phEAjc8y" target="_blank">Tham gia Discord</a>
+  <header>
+    <h1>Condogame Roblox</h1>
+    <p>Chào mừng bạn đến với Condogame Roblox!</p>
+    <a class="btn" href="https://shorturl.asia/POZJv" target="_blank">SUSSY SWAP 1</a>
+    <a class="btn" href="https://shorturl.asia/ltMUc" target="_blank">SUSSY SWAP 2</a>
+    <a class="btn" href="https://discord.gg/6phEAjc8y" target="_blank">DISCORD</a>
+  </header>
+
+  <footer>
+    © 2025 Condogame Roblox. All rights reserved.
+  </footer>
+
+  <!-- Script tạo tuyết rơi -->
+  <script>
+    function createSnowflake() {
+      const snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+      snowflake.textContent = '❄';
+      snowflake.style.left = Math.random() * 100 + 'vw';
+      snowflake.style.animationDuration = (3 + Math.random() * 5) + 's';
+      snowflake.style.fontSize = (10 + Math.random() * 15) + 'px';
+      document.body.appendChild(snowflake);
+
+      setTimeout(() => {
+        snowflake.remove();
+      }, 8000);
+    }
+
+    setInterval(createSnowflake, 200);
+  </script>
 </body>
 </html>
