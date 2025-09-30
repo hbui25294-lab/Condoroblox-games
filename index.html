@@ -11,11 +11,18 @@
       margin: 0;
       padding: 0;
       font-family: 'Press Start 2P', cursive;
-      background: url('https://www.publicdomainpictures.net/pictures/320000/velka/galaxy-background-1574186463dR0.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1a2a6c);
+      background-size: 400% 400%;
+      animation: gradientBG 20s ease infinite;
       overflow: hidden;
       color: white;
       text-align: center;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
     }
 
     h1 {
@@ -77,6 +84,7 @@
       font-size: 14px;
       opacity: 0.8;
       animation: fall linear infinite;
+      z-index: 10;
     }
 
     @keyframes fall {
