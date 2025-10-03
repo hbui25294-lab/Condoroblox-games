@@ -1,130 +1,88 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Condogame Roblox</title>
-  <!-- Font Minecraft style -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CLAIM GIFT</title>
+
+  <!-- Font Minecraft-style -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Press Start 2P', cursive;
-      background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #1a2a6c);
-      background-size: 400% 400%;
-      animation: gradientBG 20s ease infinite;
-      overflow: hidden;
-      color: white;
-      text-align: center;
+    :root {
+      --bg: #000;
+      --text: #00ffea;
+      --button-bg: #111;
+      --button-border: #00fff7;
+      --button-hover-bg: #00fff7;
+      --button-hover-text: #000;
     }
 
-    @keyframes gradientBG {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Press Start 2P', cursive;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 1rem;
     }
 
     h1 {
-      font-size: 2em;
-      margin: 50px 20px 20px;
-      background: linear-gradient(270deg, red, orange, yellow, green, cyan, blue, violet);
-      background-size: 1000% 1000%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: rainbow 10s linear infinite, sparkle 2s infinite;
-    }
-
-    @keyframes rainbow {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
-
-    @keyframes sparkle {
-      0%, 100% {text-shadow: 0 0 5px white, 0 0 10px cyan;}
-      50% {text-shadow: 0 0 15px yellow, 0 0 25px magenta;}
-    }
-
-    p {
-      font-size: 0.8em;
-      margin-bottom: 40px;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
     }
 
     .btn {
-      display: inline-block;
-      margin: 15px;
-      padding: 15px 25px;
-      background: rgba(255, 255, 255, 0.85);
-      color: black;
-      border-radius: 8px;
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      background-color: var(--button-bg);
+      color: var(--text);
+      border: 2px solid var(--button-border);
+      padding: 1rem;
+      margin: 0.75rem auto;
       text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-      box-shadow: 0 0 10px white;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+      font-size: 0.6rem;
     }
 
     .btn:hover {
-      background: yellow;
-      transform: scale(1.1);
-      box-shadow: 0 0 20px cyan, 0 0 30px violet;
+      background-color: var(--button-hover-bg);
+      color: var(--button-hover-text);
+      transform: scale(1.05);
     }
 
     footer {
-      margin-top: 60px;
-      font-size: 0.6em;
-      color: #ddd;
-    }
-
-    /* Hiệu ứng tuyết rơi */
-    .snowflake {
-      position: fixed;
-      top: -10px;
-      color: white;
-      font-size: 14px;
-      opacity: 0.8;
-      animation: fall linear infinite;
-      z-index: 10;
-    }
-
-    @keyframes fall {
-      to {
-        transform: translateY(110vh);
-        opacity: 0;
-      }
+      margin-top: 2rem;
+      font-size: 0.5rem;
+      opacity: 0.7;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Condogame Roblox</h1>
-    <p>Welcome to Condogame Roblox!</p>
-    <a class="btn" href="https://shorturl.asia/POZJv" target="_blank">SUSSY SWAP 1</a>
-    <a class="btn" href="https://shorturl.asia/ltMUc" target="_blank">SUSSY SWAP 2</a>
-    <a class="btn" href="https://discord.gg/6phEAjc8y" target="_blank">DISCORD</a>
-  </header>
+  <h1>CLAIM YOUR<br>GIFT ACCESS</h1>
 
-  <footer>
-    © 2025 Condogame Roblox. All rights reserved.
-  </footer>
+  <!-- Nút liên kết 1 -->
+  <a href="https://shorturl.asia/BDHN1" target="_blank" class="btn">LIÊN KẾT 1</a>
 
-  <!-- Script tạo tuyết rơi -->
-  <script>
-    function createSnowflake() {
-      const snowflake = document.createElement('div');
-      snowflake.classList.add('snowflake');
-      snowflake.textContent = '❄';
-      snowflake.style.left = Math.random() * 100 + 'vw';
-      snowflake.style.animationDuration = (3 + Math.random() * 5) + 's';
-      snowflake.style.fontSize = (10 + Math.random() * 15) + 'px';
-      document.body.appendChild(snowflake);
+  <!-- Nút liên kết 2 -->
+  <a href="https://shorturl.asia/skOzn" target="_blank" class="btn">LIÊN KẾT 2</a>
 
-      setTimeout(() => {
-        snowflake.remove();
-      }, 8000);
-    }
+  <!-- Nút liên kết 3 -->
+  <a href="https://www.robiox.com.ua/games/14179251425/Meet-Neko-girl?privateServerLinkCode=21680550948780079425936455336083" target="_blank" class="btn">LIÊN KẾT 3</a>
 
-    setInterval(createSnowflake, 200);
-  </script>
+  <footer>© 2025 — Landing Page Demo</footer>
 </body>
 </html>
